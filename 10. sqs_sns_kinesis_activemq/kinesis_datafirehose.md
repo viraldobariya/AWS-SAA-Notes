@@ -24,7 +24,7 @@ To simplify the pipeline of **collecting, transforming, and delivering** data to
 | Feature                           | Description                                                                                |
 | --------------------------------- | ------------------------------------------------------------------------------------------ |
 | **Fully Managed**                 | No server provisioning, scaling, or maintenance required.                                  |
-| **Near Real-Time Delivery**       | Buffering is configurable (min delay: 60 seconds or 1 MB).                                 |
+| **Near Real-Time Delivery**       | Buffering is configurable (max delay: 60 seconds or 1 MB).                                 |
 | **Built-in Data Transformation**  | Using **AWS Lambda**, you can transform data before delivery.                              |
 | **Data Format Conversion**        | Converts JSON to formats like **Parquet or ORC** for analytics use.                        |
 | **Compression & Encryption**      | Supports **GZIP, ZIP, Snappy** compression and **server-side encryption (SSE)** using KMS. |
@@ -68,7 +68,7 @@ To simplify the pipeline of **collecting, transforming, and delivering** data to
 | --------------- | ---------------------------------------- | --------------------------------------------- |
 | Management      | Requires manual provisioning and scaling | Fully managed                                 |
 | Latency         | Low (millisecond range)                  | Near real-time (buffered, seconds to minutes) |
-| Data Retention  | Up to 365 days                           | No retention (data is delivered immediately)  |
+| Data Retention  | Up to 7 days                           | No retention (data is delivered immediately)  |
 | Use Case        | Real-time analytics and processing       | Delivery to storage/analytics services        |
 | Data Processing | Custom applications needed               | Lambda-based optional transformation          |
 | Consumers       | Multiple (Lambda, EC2, custom apps)      | Firehose automatically delivers               |

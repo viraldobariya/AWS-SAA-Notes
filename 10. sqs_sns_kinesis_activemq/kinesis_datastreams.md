@@ -4,13 +4,13 @@ Based on your notes from the image, here's an **in-depth and structured explanat
 
 # **AWS Kinesis Data Streams (KDS) - In-Depth Overview**
 
-## **1. What is Kinesis Data Streams?**
+## **What is Kinesis Data Streams?**
 
 **AWS Kinesis Data Streams** is a scalable and durable real-time data streaming service. It enables developers to capture, process, and analyze **large volumes of data records** in real-time from various sources like website clickstreams, logs, IoT sensors, social media feeds, application telemetry, etc.
 
 ---
 
-## **2. Key Concepts**
+## **Key Concepts**
 
 ### **a. Shards**
 
@@ -20,7 +20,7 @@ Based on your notes from the image, here's an **in-depth and structured explanat
   * **1MB/sec write** (ingest) or **1000 records/sec**
   * **2MB/sec read** throughput
 * Streams can have **multiple shards** to support higher throughput, making it **horizontally scalable**.
-* Each record in the stream is stored in **exactly one shard** based on a partition key.
+* Each record in the stream is stored in **exactly one shard** based on a partition key. So specify same partition key for streams that must be in order. Also use verity of partition key when possible so that load can be evenly distributed among all shards.
 
 ### **b. Producers**
 
@@ -36,7 +36,35 @@ Based on your notes from the image, here's an **in-depth and structured explanat
 
 ---
 
-## **3. How It Works**
+## ⚡ **Two Modes:**
+
+### **1. PROVISIONED Mode** (Default)
+```
+Fixed shards you provision manually
+└── Throughput = SHARD COUNT × Per-Shard Limits
+```
+**Characteristics:**
+- **You choose** number of shards
+- **Fixed capacity** (scaling = manual)
+- **Pay per shard** ($0.015/hour per shard)
+- **Predictable** throughput
+- ✅ **Use when**: Stable, predictable traffic
+
+### **2. ON-DEMAND Mode**
+```
+Auto-scaling shards managed by AWS
+└── Throughput = AUTO-SCALED based on usage
+```
+**Characteristics:**
+- **AWS manages** shard count
+- **Auto-scales** based on traffic
+- **Pay per GB processed** ($0.023/GB)
+- **Starts with 4 MB/sec default**
+- ✅ **Use when**: Variable, unpredictable traffic
+
+---
+
+## **How It Works**
 
 1. **Data Ingestion**:
 
@@ -56,7 +84,7 @@ Based on your notes from the image, here's an **in-depth and structured explanat
 
 ---
 
-## **4. Key Features**
+## **Key Features**
 
 | Feature                              | Description                                                                                  |
 | ------------------------------------ | -------------------------------------------------------------------------------------------- |
@@ -69,7 +97,7 @@ Based on your notes from the image, here's an **in-depth and structured explanat
 
 ---
 
-## **5. Use Cases**
+## **Use Cases**
 
 * Real-time analytics (e.g., user behavior, clickstreams)
 * Log aggregation and monitoring
@@ -79,7 +107,7 @@ Based on your notes from the image, here's an **in-depth and structured explanat
 
 ---
 
-## **6. Best Practices**
+## **Best Practices**
 
 * **Partition keys**: Choose keys that evenly distribute data to shards.
 * **Shard scaling**: Use metrics like `IncomingBytes` and `GetRecords.IteratorAgeMilliseconds` to determine when to reshard.
@@ -88,7 +116,7 @@ Based on your notes from the image, here's an **in-depth and structured explanat
 
 ---
 
-## **7. Integration Patterns**
+## **Integration Patterns**
 
 * **Kinesis + Lambda**: Serverless processing with automatic scaling.
 * **Kinesis + Firehose**: Simplified delivery to S3, Redshift, or Elasticsearch.

@@ -27,10 +27,10 @@ You choose **which type of file system** you want based on your need (Windows, L
 
 ---
 
-### 2. 🧬 **FSx for Lustre**
+### 2. 🧬 **FSx for Lustre (Linux + Cluster)**
 
-* High-performance file system used in **HPC** (High-Performance Computing)
-* Integrates with **S3**: Reads S3 data as if it’s local
+* Linux based High-performance file system used in **HPC** (High-Performance Computing)
+* Integrates with **S3**: Bidirectional AutoSync with S3 to use S3 like HPC file system.
 * ✅ Use case: ML training, genomics, video rendering
 
 ---

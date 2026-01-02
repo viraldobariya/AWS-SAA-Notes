@@ -14,14 +14,14 @@ A fully managed Docker container registry to store, manage, and deploy container
 
 Feature	Description
 
-Private Registry	Store container images in your own secure AWS-managed registry
-Push/Pull Support	Works with Docker CLI and ECS/EKS/Fargate
-Image Tagging & Versioning	Supports tags for version control (:latest, :v1.2, etc.)
-Immutable Tags (Optional)	Prevent overwriting tagged images
-Lifecycle Policies	Auto-delete unused or old images to save space and cost
-Image Scanning	Built-in malware/vulnerability scanning (optional)
-VPC Endpoint Support	Pull/push images over private network (no internet)
-Encryption	At-rest with KMS, in-transit with HTTPS
+- Private Registry	Store container images in your own secure AWS-managed registry
+- Push/Pull Support	Works with Docker CLI and ECS/EKS/Fargate
+- Image Tagging & Versioning	Supports tags for version control (:latest, :v1.2, etc.)
+- Immutable Tags (Optional)	Prevent overwriting tagged images
+- Lifecycle Policies	Auto-delete unused or old images to save space and cost
+- Image Scanning	Built-in malware/vulnerability scanning (optional)
+- VPC Endpoint Support	Pull/push images over private network (no internet)
+- Encryption	At-rest with KMS, in-transit with HTTPS
 
 
 

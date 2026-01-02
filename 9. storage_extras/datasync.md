@@ -4,7 +4,7 @@ Absolutely — here's the **perfectly balanced version**: in-depth enough for cl
 
 ## 🔄 AWS DataSync
 
-**AWS DataSync** is a managed data transfer service designed to move large amounts of **file-based data** quickly and securely between on-premises storage and AWS services like **Amazon S3, EFS, or FSx**. It supports automated, incremental syncs and preserves file metadata during transfers.
+**AWS DataSync** is a managed data transfer service designed to move large amounts of **file-based data** quickly and securely between on-premises storage and AWS services like **Amazon S3, EFS, or FSx** (any direction possible). It supports automated, incremental syncs and preserves file metadata during transfers. At a time keep only one direction (not bidirectional) for any two resources otherwise conflicts can occur.
 
 
 ## Ways to Use it
@@ -28,6 +28,38 @@ Absolutely — here's the **perfectly balanced version**: in-depth enough for cl
   * Recurring syncs from on-prem to AWS
   * Daily/weekly backup workflows
   * Keeping AWS storage in sync with local file servers
+
+---
+
+## **DataSync's Two Operation Modes:**
+
+### **1. Online Mode (What most people know)**
+- **Direct network transfer** from your servers → AWS
+- **Requires continuous internet connectivity**
+- **Uses DataSync agent** on your VM/server
+
+### **2. Offline Mode (With Snow Family)**
+- **Snowcone/Snowball as intermediate storage**
+- **Transfer without internet** to the device
+- **AWS processes data** after device return
+
+---
+
+## **Offline DataSync Workflow:**
+
+```
+Your On-Premises Data
+         ↓
+[DataSync Agent - OFFLINE MODE]
+         ↓
+Copies data to → AWS Snowcone/Snowball
+         ↓
+You ship device to AWS
+         ↓
+AWS ingests data from device to S3/EBS/EFS
+         ↓
+Your cloud storage is populated
+```
 
 ---
 

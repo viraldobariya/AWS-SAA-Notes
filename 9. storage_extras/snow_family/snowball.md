@@ -8,7 +8,7 @@ Absolutely — here’s **AWS Snowball explained “in depth, in short”**, wit
 
 AWS Snowball is a **physical, rugged device** used to **move large amounts of data** between your on-premises site and AWS — **securely and efficiently**, **offline** or with minimal bandwidth.
 
-It can also transfer data online via DataSync(running datasync agent on snowball. But it is not cost effective, as we are not using only compute of snowball).
+It can also transfer data online via DataSync(running datasync agent on snowball. But it is not cost effective, as we are using only compute of snowball).
 
 ---
 

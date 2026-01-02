@@ -66,6 +66,31 @@ An **Auto Scaling Group** automatically manages EC2 instance lifecycle based on 
 
 Otherwise, ASG can run in the background doing non-load-balanced jobs too.
 
+#### YouTube Video Processing with ASG Scaling
+
+##### Architecture:
+
+```
+┌────────┐    Upload     ┌───────┐    Event     ┌─────────┐
+│ Users  │ ────────────> │  S3   │ ──────────>  │  SQS    │
+└────────┘    Videos     └───────┘   Message    └─────────┘
+                                              │
+                                              │ Queue Depth
+                                              ↓
+                                       ┌─────────────┐
+                                       │    ASG      │
+                                       │ (Scales by  │
+                                       │ Queue Size) │
+                                       └─────────────┘
+                                              │
+                                              │ Launches
+                                              ↓
+                                       ┌─────────────┐    pull SQS   ┌─────────────┐
+                                       │   Workers   │ ────────────> │ S3 Processed│
+                                       │ (EC2 Nodes) │  Process&Save │   Videos    │
+                                       └─────────────┘               └─────────────┘
+```
+
 ---
 
 ## 🔗 TG & ASG — The Real Relationship

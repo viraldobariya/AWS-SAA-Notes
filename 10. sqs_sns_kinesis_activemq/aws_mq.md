@@ -1,4 +1,4 @@
-Based on your notes in the image, here is a **structured and improved explanation of AWS MQ (ActiveMQ)**, using your content as the foundation and expanding for clarity and depth.
+<!-- Based on your notes in the image, here is a **structured and improved explanation of AWS MQ (ActiveMQ)**, using your content as the foundation and expanding for clarity and depth.
 
 ---
 
@@ -87,4 +87,86 @@ Based on your notes in the image, here is a **structured and improved explanatio
 
 ---
 
-Would you like a visual diagram of how AWS MQ fits into a typical application architecture, or help with comparison to RabbitMQ-based deployments?
+Would you like a visual diagram of how AWS MQ fits into a typical application architecture, or help with comparison to RabbitMQ-based deployments? -->
+
+
+
+# 📨 Amazon MQ - Short Notes
+
+## **What is it?**
+Managed message broker for **ActiveMQ** and **RabbitMQ**. Use when you need **standard protocols** (AMQP, MQTT, JMS, STOMP) instead of AWS proprietary APIs.
+
+---
+
+## **Broker Types**
+| Broker | Best For | Key Protocols |
+|--------|----------|---------------|
+| **ActiveMQ** | Java/JMS apps | OpenWire, AMQP, MQTT |
+| **RabbitMQ** | Polyglot apps | AMQP 0-9-1, MQTT |
+
+---
+
+## **Key Features**
+- **High Availability**: Active/Standby across AZs (~60s failover)
+- **Protocol Support**: AMQP, MQTT, JMS, STOMP, OpenWire
+- **Security**: VPC-only, TLS, KMS encryption, IAM/LDAP auth
+- **Storage**: EBS (both) or EFS (ActiveMQ only)
+- **Scalability**: Storage scalability is there (EFS, EBS) but Compute scalability is Vertical only (Single instance server)
+
+---
+
+## **vs SQS/SNS**
+```
+Use Amazon MQ when:
+✅ Migrating existing on-prem messaging apps
+✅ Need standard protocols (AMQP, MQTT, JMS)
+✅ Require broker features (queues, topics, exchanges)
+
+Use SQS/SNS when:
+✅ Building new cloud-native apps  
+✅ AWS proprietary API is okay
+✅ Want simpler, fully managed service
+```
+
+---
+
+## **Deployment Modes**
+- **Single Instance**: Dev/Test only (no HA)
+- **Active/Standby**: Production (auto-failover)
+
+---
+
+## **Pricing**
+- **Per instance hour** + storage (EBS/EFS)
+- Example: mq.m5.large = ~$0.276/hour
+- More expensive than SQS/SNS but provides protocol compatibility
+
+---
+
+## **Quick Comparison**
+| | Amazon MQ | SQS/SNS |
+|-|-----------|---------|
+| **Protocols** | Standard (AMQP, MQTT) | AWS proprietary |
+| **Migration** | Easy lift-and-shift | Code changes needed |
+| **Management** | More configuration | Simpler |
+| **Best for** | Existing apps | New apps |
+
+---
+
+## **Use Cases**
+1. **Legacy app migration** (IBM MQ → Amazon MQ)
+2. **IoT** (devices using MQTT)
+3. **Financial systems** (JMS-based)
+4. **Healthcare** (HL7 over MQTT)
+
+---
+
+## **Pro Tips**
+- Always use **Active/Standby** for production
+- Monitor **HeapMemoryUsage** in CloudWatch
+- **VPC-only** - no public access
+- Test failover during maintenance windows
+
+---
+
+**Bottom Line:** Amazon MQ = "Managed traditional message broker for lift-and-shift migrations when you need standard protocols."

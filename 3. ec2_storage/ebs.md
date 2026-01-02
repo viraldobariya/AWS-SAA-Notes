@@ -12,7 +12,8 @@ It is **durable**, **scalable**, and **high-performance**, built for **boot volu
 ## 🔧 1. **How EBS Works (Internals)**
 
 * Each **EBS volume** is **network-attached**, even if it feels local.
-* It is **region-specific** and lives in a **single AZ (Availability Zone)**.
+* It is **AZ-specific** and lives in a **single AZ (Availability Zone)**.
+* EC2 can attach EBS volumes of any type in only same AZ.
 * Volumes are **persistent**—survive instance stop/start.
 * You can only **attach a volume to one EC2 instance at a time** (except for Multi-Attach on io1/io2).
 
