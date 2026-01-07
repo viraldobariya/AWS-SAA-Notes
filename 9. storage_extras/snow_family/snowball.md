@@ -95,6 +95,7 @@ It can also transfer data online via DataSync(running datasync agent on snowball
 | **DataSync**                 | Automated online sync for smaller jobs        |
 
 ---
+<img width="1286" height="721" alt="image" src="https://github.com/user-attachments/assets/781bab5b-2859-43ac-ae59-39fe20e00774" />
 
 ### ✅ Final Summary
 
