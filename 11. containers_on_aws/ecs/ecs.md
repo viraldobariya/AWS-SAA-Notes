@@ -484,4 +484,7 @@ aws logs get-log-events --log-group-name /ecs/my-task --log-stream-name <stream>
 ---
 
 **Golden Rule:** Fargate = less ops, EC2 = more control. Choose based on team expertise and workload predictability.
+
+---
+
 AWS:- https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html
