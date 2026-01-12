@@ -40,6 +40,11 @@
 
 ---
 
+<img width="591" height="241" alt="image" src="https://github.com/user-attachments/assets/e47c2c13-d603-4da3-82f5-f7db8a42c082" />
+
+---
+
+
 ## **4. Key Features**
 
 | Feature                           | Description                                                                                            |
