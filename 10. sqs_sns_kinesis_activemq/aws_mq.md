@@ -177,3 +177,6 @@ Use SQS/SNS when:
 ---
 
 **Bottom Line:** Amazon MQ = "Managed traditional message broker for lift-and-shift migrations when you need standard protocols."
+
+
+AWS:-  https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/working-with-activemq.html      
