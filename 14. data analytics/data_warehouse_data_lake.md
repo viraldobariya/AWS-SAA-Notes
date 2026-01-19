@@ -7,7 +7,7 @@ Here’s a clear and short comparison of **Data Warehouse vs Data Lake**:
 | Aspect           | Description                                                    |
 | ---------------- | -------------------------------------------------------------- |
 | **Data Type**    | Mostly **structured** data (tables, rows, columns)             |
-| **Use Case**     | Business **analytics**, reporting, dashboards (OLAP)           |
+| **Use Case**     | Business **analytics**, reporting, dashboards (OLAP=online analytical processing)|
 | **Schema**       | **Schema-on-write** (define schema before loading data)        |
 | **Speed**        | **Fast** for analytical queries                                |
 | **Storage Cost** | **Higher** (due to structured format, indexing, optimization)  |

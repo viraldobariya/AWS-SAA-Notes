@@ -61,6 +61,9 @@ To simplify the pipeline of **collecting, transforming, and delivering** data to
      * **Splunk** (for log analytics)
 
 ---
+<img width="1950" height="970" alt="image" src="https://github.com/user-attachments/assets/a67b3887-88fb-4ec1-88dd-18fb3933b16d" />
+
+---
 
 ## **4. Differences from Kinesis Data Streams**
 

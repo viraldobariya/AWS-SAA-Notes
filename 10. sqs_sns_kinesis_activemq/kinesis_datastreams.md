@@ -35,7 +35,9 @@ Based on your notes from the image, here's an **in-depth and structured explanat
 * Multiple consumers can read data from a stream simultaneously (multi-consumer support).
 
 ---
+<img width="1102" height="474" alt="image" src="https://github.com/user-attachments/assets/7c081a2d-6d45-49ce-ae62-bef92482232f" />
 
+---
 ## ⚡ **Two Modes:**
 
 ### **1. PROVISIONED Mode** (Default)

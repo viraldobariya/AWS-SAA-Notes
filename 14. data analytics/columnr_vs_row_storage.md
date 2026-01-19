@@ -8,7 +8,7 @@ Here’s a **clear, short but in-depth** explanation of **Columnar vs Row Storag
 
 #### ✅ Best for:
 
-* **Transactional systems (OLTP)**
+* **Transactional systems (OLTP=Online Transaction Processing)**
 * Frequent **inserts, updates, deletes**
 * Queries that access **entire rows**
 

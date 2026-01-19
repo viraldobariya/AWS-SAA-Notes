@@ -40,6 +40,9 @@
 
 ---
 
+---
+
+
 ## **4. Key Features**
 
 | Feature                           | Description                                                                                            |
@@ -105,6 +108,10 @@ Managed message broker for **ActiveMQ** and **RabbitMQ**. Use when you need **st
 | **RabbitMQ** | Polyglot apps | AMQP 0-9-1, MQTT |
 
 ---
+<img width="591" height="241" alt="image" src="https://github.com/user-attachments/assets/e47c2c13-d603-4da3-82f5-f7db8a42c082" />
+
+---
+
 
 ## **Key Features**
 - **High Availability**: Active/Standby across AZs (~60s failover)
@@ -170,3 +177,6 @@ Use SQS/SNS when:
 ---
 
 **Bottom Line:** Amazon MQ = "Managed traditional message broker for lift-and-shift migrations when you need standard protocols."
+
+
+AWS:-  https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/working-with-activemq.html      
