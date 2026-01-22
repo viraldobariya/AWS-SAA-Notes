@@ -159,7 +159,8 @@ Each event is a structured JSON with:
 | **Supports SaaS integration**   | Partner event buses                   |
 
 ---
-
+<img width="1024" height="501" alt="image" src="https://github.com/user-attachments/assets/e4d16270-7a58-45a4-9a71-ae50abfd02dd" />
+---
 Let me know if you want:
 
 * 💻 Hands-on example setup
