@@ -95,6 +95,12 @@ Root
 ├── ProjectB OU
 ```
 
+<img width="902" height="758" alt="image" src="https://github.com/user-attachments/assets/4c72d683-4150-4f10-9962-87297232cc06" />
+
+
+
+
+---
 You can **mix and match** depending on your governance and billing needs.
 
 ---
@@ -253,4 +259,9 @@ You **must manually attach an SCP to the management account** if you want to res
 
 ---
 
-Would you like a **diagram**, **sample org setup plan**, or **real-world SCP strategy** based on your use case (e.g., Dev/Prod separation)?
+<img width="240" height="234" alt="image" src="https://github.com/user-attachments/assets/3f96fb0a-cf9e-4f9f-bd15-6f7d81748bce" />
+
+---
+
+  <h3 href = 'https://aws.amazon.com/blogs/industries/best-practices-for-aws-organizations-service-control-policies-in-a-multi-account-environment/'> AWS  documentation : </h3>
+  <p>https://aws.amazon.com/blogs/industries/best-practices-for-aws-organizations-service-control-policies-in-a-multi-account-environment/</p>
